@@ -53,7 +53,8 @@ export default makeStyles(theme => ({
   },
   title: {
     textAlign: "center",
-    marginBottom: theme.spacing(3)
+    marginBottom: theme.spacing(3),
+    padding: "10px"
   },
   paper: {
     padding: theme.spacing(2),

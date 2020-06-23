@@ -42,25 +42,55 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./styles";
 
-import Logo from "../../images/logo1.png";
-
 export default function Registrasi() {
   const classes = useStyles();
   return (
     <>
       <div className={classes.daftarBlock}>
         <div className={classes.daftarBox}>
-          <div className={classes.logoBox}>
-            <img src={Logo} alt="logo"/>
-          </div>
+          <div className={classes.logoBox}>{/* untuk logo */}</div>
           <Container maxWidth="xs">
             <Paper className={classes.paper}>
               <Typography variant="h5" component="h1" className={classes.title}>
-                Buat Akun Baru
+                Selamat Datang
               </Typography>
               <Grid container className={classes.button}>
-                
-                <Typography variant="h5">Menu Artikel</Typography>
+                <a href="https://muslimgoonline.com/yuk-ngaji/artikel">
+                  <Typography
+                    variant="h5"
+                    component="h1"
+                    className={classes.title}
+                  >
+                    Artikel
+                  </Typography>
+                </a>
+                <a href="https://muslimgoonline.com/yuk-ngaji/event">
+                  <Typography
+                    variant="h5"
+                    component="h1"
+                    className={classes.title}
+                  >
+                    Event
+                  </Typography>
+                </a>
+                <a href="https://muslimgoonline.com/yuk-ngaji/donasi">
+                  <Typography
+                    variant="h5"
+                    component="h1"
+                    className={classes.title}
+                  >
+                    Donasi
+                  </Typography>
+                </a>
+                <a href="https://muslimgoonline.com/yuk-ngaji/jualan">
+                  <Typography
+                    variant="h5"
+                    component="h1"
+                    className={classes.title}
+                  >
+                    Jualan
+                  </Typography>
+                </a>
               </Grid>
             </Paper>
           </Container>
