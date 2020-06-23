@@ -52,7 +52,7 @@ export default function Registrasi() {
           <Container maxWidth="xs">
             <Paper className={classes.paper}>
               <Typography variant="h5" component="h1" className={classes.title}>
-                Selamat Datang
+                Selamat Datang!
               </Typography>
               <Grid container className={classes.button}>
                 <a href="https://muslimgoonline.com/yuk-ngaji/artikel">
