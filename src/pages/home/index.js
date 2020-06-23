@@ -42,20 +42,25 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./styles";
 
+import Logo from "../../images/logo1.png";
+
 export default function Registrasi() {
   const classes = useStyles();
   return (
     <>
       <div className={classes.daftarBlock}>
         <div className={classes.daftarBox}>
-          <div className={classes.logoBox}>{/* untuk logo */}</div>
+          <div className={classes.logoBox}>
+            <img src={Logo} alt="logo"/>
+          </div>
           <Container maxWidth="xs">
             <Paper className={classes.paper}>
               <Typography variant="h5" component="h1" className={classes.title}>
                 Buat Akun Baru
               </Typography>
               <Grid container className={classes.button}>
-                <Typography>Menu Artikel</Typography>
+                
+                <Typography variant="h5">Menu Artikel</Typography>
               </Grid>
             </Paper>
           </Container>
