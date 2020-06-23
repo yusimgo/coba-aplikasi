@@ -3,7 +3,6 @@ import React from "react";
 import Registrasi from "./pages/registrasi";
 import Login from "./pages/login";
 import LupaPassword from "./pages/lupa-password";
-import Landing from "./pages/landing";
 import NotFound from "./pages/404";
 import Private from "./pages/private";
 import PrivateRoute from "./components/PrivateRoute";

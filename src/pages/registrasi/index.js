@@ -128,7 +128,7 @@ export default function Registrasi() {
   };
 
   if (user) {
-    return <Redirect to="/chat" />;
+    return <Redirect to="/home" />;
   }
 
   return (
