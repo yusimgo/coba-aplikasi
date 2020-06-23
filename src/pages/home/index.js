@@ -3,6 +3,8 @@ import React from "react";
 import useStyles from "./styles";
 
 import MenuArtikel from "../../images/artikel-menu.png";
+import MenuDiskusi from "../../images/diskusi-menu2.png";
+import MenuDonasi from "../../images/donasi-menu2.png";
 
 export default function Registrasi() {
   const classes = useStyles();
@@ -16,11 +18,11 @@ export default function Registrasi() {
           </a>
 
           <a href="https://muslimgoonline.com/yuk-ngaji/event">
-            <img className={classes.logoBox} src={MenuArtikel} alt="" />
+            <img className={classes.logoBox} src={MenuDiskusi} alt="" />
           </a>
 
           <a href="https://muslimgoonline.com/yuk-ngaji/donasi">
-            <img className={classes.logoBox} src={MenuArtikel} alt="" />
+            <img className={classes.logoBox} src={MenuDonasi} alt="" />
           </a>
 
           <a href="https://muslimgoonline.com/yuk-ngaji/jualan">

@@ -20,9 +20,9 @@ export default function App() {
         <Router>
           <Switch>
             <Route path="/" exact component={Registrasi} />
-            <Route path="/home" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/lupa-password" component={LupaPassword} />
+            <PrivateRoute path="/home" component={Home} />
             <PrivateRoute path="/chat" component={Private} />
             <PrivateRoute path="/pengaturan" component={Private} />
 
