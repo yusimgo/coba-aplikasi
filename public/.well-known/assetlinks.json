@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.ktaoey",
+      "sha256_cert_fingerprints": ["4F:9B:F6:C1:DB:E8:A2:3E:DA:0F:02:51:01:5B:DC:10:2B:CD:B4:FF:36:47:49:75:60:82:24:52:C1:F9:E8:7F", "SHA256: B0:78:88:B3:A2:99:80:68:E3:65:07:86:7C:57:1B:3E:44:B1:35:50:EE:27:82:46:9E:9D:1E:E0:0E:15:4C:49"]
+    }
+  }
+]
