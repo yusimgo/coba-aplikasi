@@ -3,8 +3,6 @@ import React from "react";
 import useStyles from "./styles";
 
 import MenuArtikel from "../../images/artikel-menu.png";
-import MenuDiskusi from "../../images/diskusi-menu2.png";
-import MenuDonasi from "../../images/donasi-menu2.png";
 
 export default function Registrasi() {
   const classes = useStyles();
