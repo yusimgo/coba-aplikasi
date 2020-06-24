@@ -19,32 +19,13 @@ export default function Login() {
           <Container maxWidth="xs">
             <Paper className={classes.paper}>
               <Typography variant="h5" component="h1" className={classes.title}>
-                Buat Akun Baru
+                Login
               </Typography>
               <form>
-                <TextField
-                  id="nama"
-                  name="nama"
-                  label="Nama"
-                  margin="normal"
-                  fullWidth
-                  required
-                  variant="outlined"
-                />
                 <TextField
                   id="email"
                   name="email"
                   label="Email"
-                  margin="normal"
-                  fullWidth
-                  required
-                  variant="outlined"
-                />
-                <TextField
-                  id="notelp"
-                  type="number"
-                  name="notelp"
-                  label="Notelp"
                   margin="normal"
                   fullWidth
                   required
@@ -61,17 +42,6 @@ export default function Login() {
                   required
                   variant="outlined"
                 />
-                <TextField
-                  id="ulangi_password"
-                  type="password"
-                  name="ulangi_password"
-                  label="Ulangi Password"
-                  autoComplete="new-password"
-                  margin="normal"
-                  fullWidth
-                  required
-                  variant="outlined"
-                />
                 <Grid container className={classes.button}>
                   <Grid item xs>
                     <Button
@@ -80,16 +50,12 @@ export default function Login() {
                       variant="contained"
                       size="large"
                     >
-                      Daftar
+                      Login
                     </Button>
                   </Grid>
                   <Grid item>
-                    <Button
-                      variant="contained"
-                      size="large"
-                      disable={isSubmitting}
-                    >
-                      Login
+                    <Button variant="contained" size="large">
+                      Daftar
                     </Button>
                   </Grid>
                 </Grid>
