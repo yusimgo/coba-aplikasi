@@ -5,9 +5,9 @@ import Registrasi from "./pages/registrasi";
 import Login from "./pages/login";
 import LupaPassword from "./pages/lupa-password";
 import NotFound from "./pages/404";
-import Private from "./pages/private";
 import PrivateRoute from "./components/PrivateRoute";
 import Chat from "./pages/private/chat";
+import Pengaturan from "./pages/private/pengaturan";
 import Home from "./pages/home";
 
 import FirebaseProvider from "./components/FirebaseProvider";
@@ -18,7 +18,7 @@ import { SnackbarProvider } from "notistack";
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <SnackbarProvider>
+      <SnackbarProvider maxSnack={3}>
         <FirebaseProvider>
           <Router>
             <Switch>
@@ -27,8 +27,8 @@ export default function App() {
               <Route path="/login" component={Login} />
               <Route path="/lupa-password" component={LupaPassword} />
               <PrivateRoute path="/chat" component={Chat} />
+              <PrivateRoute path="/pengaturan" component={Pengaturan} />
               <PrivateRoute path="/home" component={Home} />
-              <PrivateRoute path="/pengaturan" component={Private} />
 
               <Route component={NotFound} />
             </Switch>
