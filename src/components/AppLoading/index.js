@@ -10,8 +10,15 @@ function AppLoading() {
   const classes = useStyles();
 
   return (
-    <Container className{classes.loadingBlock} maxWidth="xs">
-    <div></div>
+    <Container className={classes.loadingBlock} maxWidth="xs">
+      <div className={classes.loadingBox}>
+        <Typography variant="h6" component="h2" className={classes.title}>
+          Chat App
+        </Typography>
+        <LinearProgress />
+      </div>
     </Container>
-  )
+  );
 }
+
+export default AppLoading;

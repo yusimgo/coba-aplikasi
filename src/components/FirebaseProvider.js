@@ -4,6 +4,8 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 
+import AppLoading from "../components/AppLoading";
+
 import firebaseConfig from "../config/firebase";
 
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -24,7 +26,7 @@ export default function FirebaseProvider(props) {
   const [user, loading] = useAuthState(auth);
 
   if (loading) {
-    return <h1>Loading Auth State...</h1>;
+    return <AppLoading />;
   }
   return (
     <FirebaseContext.Provider

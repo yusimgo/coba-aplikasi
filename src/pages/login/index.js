@@ -6,6 +6,8 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
+import { Link } from "react-router-dom";
+
 import useStyles from "./styles";
 
 export default function Login() {
@@ -54,11 +56,21 @@ export default function Login() {
                     </Button>
                   </Grid>
                   <Grid item>
-                    <Button variant="contained" size="large">
+                    <Button
+                      component={Link}
+                      variant="contained"
+                      size="large"
+                      to="/registrasi"
+                    >
                       Daftar
                     </Button>
                   </Grid>
                 </Grid>
+                <div className={classes.forgetPassword}>
+                  <Typography component={Link} to="/lupa-password">
+                    Lupa Password?
+                  </Typography>
+                </div>
               </form>
             </Paper>
           </Container>
