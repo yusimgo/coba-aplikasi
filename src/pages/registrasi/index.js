@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextField from '@material-ui/core/TextField';
+import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
@@ -17,7 +17,7 @@ import {
   useFirebase
 } from "../../components/FirebaseProvider";
 
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default function Registrasi() {
   const classes = useStyles();
@@ -231,6 +231,8 @@ export default function Registrasi() {
                   </Grid>
                   <Grid item>
                     <Button
+                      component={Link}
+                      to="/login"
                       variant="contained"
                       size="large"
                       disable={isSubmitting}
