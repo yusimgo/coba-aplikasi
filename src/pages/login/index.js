@@ -10,12 +10,7 @@ import useStyles from "./styles";
 
 import isEmail from "validator/lib/isEmail";
 
-import {
-  auth,
-  firestore,
-  FieldValue,
-  useFirebase
-} from "../../components/FirebaseProvider";
+import { auth, useFirebase } from "../../components/FirebaseProvider";
 
 import { Link, Redirect } from "react-router-dom";
 
