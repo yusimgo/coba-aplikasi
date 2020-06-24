@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
@@ -8,10 +8,11 @@ import Typography from "@material-ui/core/Typography";
 
 import useStyles from "./styles";
 
+import { Link } from "react-router-dom";
+
 import isEmail from "validator/lib/isEmail";
 
-import { auth, useFirebase } from "../../components/FirebaseProvider";
-
+import { auth } from "../../components/FirebaseProvider";
 
 export default function LupaPassword() {
   const classes = useStyles();
@@ -24,8 +25,6 @@ export default function LupaPassword() {
   const [error, setError] = useState({});
 
   const [isSubmitting, setSubmitting] = useState(false);
-
-  const { user } = useFirebase();
 
   const handleChange = e => {
     setForm({
@@ -43,10 +42,6 @@ export default function LupaPassword() {
       newErrors.email = "Email tidak valid";
     }
 
-    if (!form.password) {
-      newErrors.password = "Password wajib diisi";
-    }
-
     return newErrors;
   };
 
@@ -59,7 +54,12 @@ export default function LupaPassword() {
     } else {
       setSubmitting(true);
       try {
-        await auth.sendPasswordResetEmail(form.email, form.password);
+        const actionCodeSettings = {
+          url: `${window.location.origin}/login`
+        };
+        await auth.sendPasswordResetEmail(form.email, actionCodeSettings);
+
+        console.log("link berhasil dikirim");
       } catch (e) {
         let newError = {};
         switch (e.code) {
@@ -71,16 +71,8 @@ export default function LupaPassword() {
             newError.email = "Email tidak valid";
             break;
 
-          case "auth/wrong-password":
-            newError.password = "Password salah";
-            break;
-
-          case "auth/user-disabled":
-            newError.email = "Pengguna di blokir";
-            break;
-
           default:
-            newError.email = "Terjadi kesalahan silahkan coba lagi";
+            newError.email = "Terjadi kesalahan, silahkan coba lagi";
             break;
         }
 
@@ -90,63 +82,63 @@ export default function LupaPassword() {
     }
   };
 
-
-  return ( <>
-  <div className={classes.daftarBlock}>
-    <div className={classes.daftarBox}>
-      <div className={classes.logoBox}>{/* untuk logo */}</div>
-      <Container maxWidth="xs">
-        <Paper className={classes.paper}>
-          <Typography variant="h5" component="h1" className={classes.title}>
-            Lupa Password
-          </Typography>
-          <form onSubmit={handleSubmit} noValidate>
-            <TextField
-              id="email"
-              name="email"
-              label="Email"
-              margin="normal"
-              fullWidth
-              required
-              variant="outlined"
-              value={form.email}
-              onChange={handleChange}
-              error={error.email ? true : false}
-              helperText={error.email}
-              disable={isSubmitting}
-            />
-            <Grid container className={classes.button}>
-              <Grid item xs>
-                <Button
-                  type="submit"
-                  color="primary"
-                  variant="contained"
-                  size="large"
-                >
-                  Kirim
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button
-                  component={Link}
-                  variant="contained"
-                  size="large"
-                  to="/login"
-                >
-                  Login
-                </Button>
-              </Grid>
-            </Grid>
-            <div className={classes.forgetPassword}>
-              <Typography component={Link} to="/lupa-password">
-                Lupa Password?
+  return (
+    <>
+      <div className={classes.daftarBlock}>
+        <div className={classes.daftarBox}>
+          <div className={classes.logoBox}>{/* untuk logo */}</div>
+          <Container maxWidth="xs">
+            <Paper className={classes.paper}>
+              <Typography variant="h5" component="h1" className={classes.title}>
+                Lupa Password
               </Typography>
-            </div>
-          </form>
-        </Paper>
-      </Container>
-    </div>
-  </div>
-</>
-)
+              <form onSubmit={handleSubmit} noValidate>
+                <TextField
+                  id="email"
+                  name="email"
+                  label="Email"
+                  margin="normal"
+                  fullWidth
+                  required
+                  variant="outlined"
+                  value={form.email}
+                  onChange={handleChange}
+                  error={error.email ? true : false}
+                  helperText={error.email}
+                  disable={isSubmitting}
+                />
+                <Grid container className={classes.button}>
+                  <Grid item xs>
+                    <Button
+                      type="submit"
+                      color="primary"
+                      variant="contained"
+                      size="large"
+                    >
+                      Kirim
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button
+                      component={Link}
+                      variant="contained"
+                      size="large"
+                      to="/login"
+                    >
+                      Login
+                    </Button>
+                  </Grid>
+                </Grid>
+                <div className={classes.forgetPassword}>
+                  <Typography component={Link} to="/lupa-password">
+                    Lupa Password?
+                  </Typography>
+                </div>
+              </form>
+            </Paper>
+          </Container>
+        </div>
+      </div>
+    </>
+  );
 }
