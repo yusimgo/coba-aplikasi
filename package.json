@@ -7,6 +7,7 @@
   "dependencies": {
     "@material-ui/core": "4.10.2",
     "@material-ui/icons": "4.9.1",
+    "express": "4.17.1",
     "firebase": "7.15.3",
     "notistack": "0.9.17",
     "react": "16.12.0",
