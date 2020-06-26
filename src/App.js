@@ -7,7 +7,6 @@ import LupaPassword from "./pages/lupa-password";
 import NotFound from "./pages/404";
 import PrivateRoute from "./components/PrivateRoute";
 import Chat from "./pages/private/chat";
-import ChatGroup from "./pages/private/chat-group";
 import Pengaturan from "./pages/private/pengaturan";
 import Home from "./pages/home";
 
@@ -28,7 +27,6 @@ export default function App() {
               <Route path="/login" component={Login} />
               <Route path="/lupa-password" component={LupaPassword} />
               <PrivateRoute path="/chat" component={Chat} />
-              <PrivateRoute path="/chat-group" component={ChatGroup} />
               <PrivateRoute path="/pengaturan" component={Pengaturan} />
               <PrivateRoute path="/home" component={Home} />
 
