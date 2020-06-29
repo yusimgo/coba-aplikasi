@@ -1,63 +1,83 @@
-/* import { makeStyles } from "@material-ui/core/styles";
-
-export default makeStyles(theme => ({
-  daftarBox: {
-    flexDirection: "row"
-  },
-  logoBox: {
-    width: 380,
-    height: 111
-  },
-  menuBarisSatu: {
-    flexDirection: "column",
-    padding: "10px",
-    alignItems: "center"
-  }
-}));
- */
-
 import { makeStyles } from "@material-ui/core/styles";
-import bg from "../../images/crop.jpg";
+import background from "../../images/background9.png";
 
 export default makeStyles(theme => ({
-  daftarBlock: {
-    backgroundImage: `url(${bg})`,
-    width: "100%",
-    height: 320,
-    borderRadius: "0 0 100% 100%",
-    position: "relative",
-    "&;before": {
-      content: '""',
-      opacity: "-9",
-      width: "100%",
-      height: 320,
-      position: "absolute",
-      top: 0,
-      left: 0,
-      borderRadius: "0 0 100% 100%",
-      zIndex: 1
-    }
-  },
-  daftarBox: {
-    position: "relative",
-    height: "100%",
-    zIndex: 2,
+  body: {
+    backgroundImage: `url(${background})`,
+    height: "100vh",
     display: "flex",
     alignItems: "center",
-    flexFlow: "column nowrap"
+    backgroundColor: "#412B8E",
+    padding: "20px"
   },
-  logoBox: {
-    width: 282,
-    height: 69,
-    margin: "30px auto 20px"
+  bungkusUtama: {
+    flexDirection: "column",
+    width: "100%"
+  },
+  bungkusMenuSatu: {
+    flexDirection: "row",
+    display: "flex",
+    alignItems: "center",
+    paddingTop: "12%"
+  },
+  menuSatu: {
+    padding: "8px",
+    alignItems: "center",
+    width: "100%"
+  },
+  bungkusMenuDua: {
+    flexDirection: "row",
+    display: "flex",
+    alignItems: "center"
+  },
+  menuDua: {
+    padding: "8px",
+    alignItems: "center",
+    width: "100%"
+  },
+  paper: {
+    backgroundColor: "#7380F3",
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    paddingTop: "16px",
+    paddingBottom: "16px",
+    borderRadius: "16px",
+    width: "100%",
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+  },
+  gambar: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    width: "70%",
+    paddingBottom: "2px"
+  },
+  decoration: {
+    textDecoration: "none",
+    width: "50%"
   },
   title: {
     textAlign: "center",
-    marginBottom: theme.spacing(3),
-    padding: "10px"
+    color: "white",
+    fontSize: "14px"
   },
-  paper: {
-    padding: theme.spacing(2),
-    boxShadow: "none"
+  textHallo: {
+    fontSize: "30px",
+    fontWeight: "bold",
+    color: "white",
+    paddingLeft: "10px"
+  },
+  textSelamatDatang: {
+    color: "white",
+    lineHeight: "95%",
+    paddingLeft: "10px"
+  },
+  logo: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    paddingTop: "20%",
+    width: "70%"
   }
 }));
