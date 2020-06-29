@@ -13,7 +13,7 @@ function AppLoading() {
     <Container className={classes.loadingBlock} maxWidth="xs">
       <div className={classes.loadingBox}>
         <Typography variant="h6" component="h2" className={classes.title}>
-          Chat App
+          Silaturahmi Aplikasi
         </Typography>
         <LinearProgress />
       </div>
