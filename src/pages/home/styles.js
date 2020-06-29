@@ -14,6 +14,17 @@ export default makeStyles(theme => ({
     flexDirection: "column",
     width: "100%"
   },
+  textHallo: {
+    fontSize: "30px",
+    fontWeight: "bold",
+    color: "white",
+    paddingLeft: "10px"
+  },
+  textSelamatDatang: {
+    color: "white",
+    lineHeight: "100%",
+    paddingLeft: "10px"
+  },
   bungkusMenuSatu: {
     flexDirection: "row",
     display: "flex",
@@ -61,17 +72,6 @@ export default makeStyles(theme => ({
     textAlign: "center",
     color: "white",
     fontSize: "14px"
-  },
-  textHallo: {
-    fontSize: "30px",
-    fontWeight: "bold",
-    color: "white",
-    paddingLeft: "10px"
-  },
-  textSelamatDatang: {
-    color: "white",
-    lineHeight: "95%",
-    paddingLeft: "10px"
   },
   logo: {
     display: "block",
