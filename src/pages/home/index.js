@@ -1,6 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
 import Artikel from "../../images/article-white2.png";
 import Event from "../../images/event-white2.png";
@@ -19,6 +20,7 @@ export default function SimpleContainer() {
     <React.Fragment>
       <CssBaseline />
       <div className={classes.body}>
+        <Container maxWidth="xs">
         <div className={classes.bungkusUtama}>
           <Typography className={classes.textHallo}>Hallo!</Typography>
           <Typography className={classes.textSelamatDatang}>
@@ -145,6 +147,7 @@ export default function SimpleContainer() {
 
           <img className={classes.logo} src={Logo} alt="Logo" />
         </div>
+        </Container>
       </div>
     </React.Fragment>
   );
