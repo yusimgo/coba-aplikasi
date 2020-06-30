@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import bg from "../../images/crop.jpg";
+import bg from "../../images/background9.png";
 
 export default makeStyles(theme => ({
   daftarBlock: {
